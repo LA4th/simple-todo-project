@@ -1,1 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Solway:wght@300;400;500;700;800&display=swap");
 @import "tailwindcss";
+
+
+@theme {
+  /* COLOR */
+  --color-black: #111111,
+  --color-white: #F4F4F4,
+  --color-red: #961B27,
+  --color-green: #228C22,
+  --color-blue: #03204C,
+  --color-grey: #555555,
+  /* FONT FAMILY */
+  --font-robot: "Roboto", sans-serif,
+  --font-solway: "Solway", serif,
+}
+/* DEBUG LAYOUT */
+* {
+  border: 1px solid red;
+}
