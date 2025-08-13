@@ -7,6 +7,7 @@
   /* COLOR */
   --color-black: #111111;
   --color-white: #F4F4F4;
+  --color-innerLayer: #FFFFFF;
   --color-red: #961B27;
   --color-green: #228C22;
   --color-blue: #03204C;
@@ -17,6 +18,6 @@
 }
 
 /* DEBUG LAYOUT */
-/* * {
+* {
   border: 1px solid red;
-} */
+}
