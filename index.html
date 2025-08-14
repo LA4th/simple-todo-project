@@ -14,59 +14,83 @@
       <!-- LOGO -->
       <span class="text-white font-solway text-4xl font-bold">To-Do Muto</span>
       <!-- BURGER BTN -->
-      <button id="btnBurger" class="md:hidden p-1 border-[1px] border-white rounded-md" aria-label="Burger_Button"><i class="fa-solid fa-bars text-3xl text-white"></i></button>
+      <button id="btnBurger" class="md:hidden p-1 border-[1px] border-white rounded-md" aria-label="Burger_Button">
+        <i class="fa-solid fa-bars text-3xl text-white"></i>
+      </button>
       <!-- NAV MENU -->
       <ul id="navMenu" class="bg-black max-w-full w-1/2 h-screen pt-19 pr-4 pl-4 flex flex-col gap-y-4 absolute top-0 right-0 transition ease-in-out duration-300 transform translate-x-full opacity-0 pointer-events-none md:static md:translate-x-0 md:opacity-100 md:pointer-events-auto md:h-full md:w-auto md:flex md:flex-row md:gap-x-5 md:bg-transparent md:p-0">
         <!-- CLOSE BTN-->
-        <li class="md:hidden p-1 border-[1px] border-white rounded-md absolute top-3.5 right-3"><button id="btnClose" aria-label="Close_Button" type="button"><i class="fa-solid fa-xmark text-white text-3xl"></i></button></li>
+        <li class="md:hidden p-1 border-[1px] border-white rounded-md absolute top-3.5 right-3">
+          <button id="btnClose" aria-label="Close_Button" type="button">
+            <i class="fa-solid fa-xmark text-white text-3xl"></i>
+          </button>
+        </li>
         <!-- HOME BTN -->
-        <li class="text-center"><button id="btnHome" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="Home_Button">Home</button></li>
+        <li class="text-center">
+          <button id="btnHome" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="Home_Button">
+            Home
+          </button>
+        </li>
         <!-- COMPLETE TASK BTN -->
-        <li class="text-center"><button id="btnCompleteTask" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="Complete_Task_Button">Complete Task</button></li>
+        <li class="text-center">
+          <button id="btnCompleteTask" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="Complete_Task_Button">
+            Complete Task
+          </button>
+        </li>
         <!-- ABOUT BTN -->
-        <li class="text-center"><button id="btnAbout" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="About_Button">About</button></li>
+        <li class="text-center">
+          <button id="btnAbout" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="About_Button">
+            About
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
   <!-- MAIN SECTION -->
   <main class="max-w-full w-[900px] pl-2 pr-2 m-auto flex-1 mt-2 mb-2">
     <!-- HOME VIEW SECTION -->
-    <section class="h-screen max-w-full flex flex-col gap-y-3">
+    <section class="h-screen max-w-full flex flex-col items-center gap-y-3">
       <!-- SEARCH BAR CONTAINER -->
       <div class="bg-white w-full p-3 rounded-md flex flex-row justify-center shadow-md">
         <input class="w-full p-1 bg-innerLayer" type="text" name="" id="" placeholder="Search...">
         <button class="bg-blue text-innerLayer p-1 font-bold w-25 rounded-r-md cursor-pointer">Search</button>
       </div>
       <!-- TASK CONTAINER -->
-      <div class="w-full p-1.5 rounded-md">
+      <div class="w-full h-full p-2 rounded-md bg-white shadow-md overflow-y-scroll">
         <!-- TASK CARD -->
-        <div class="w-full">
+        <div class="w-full flex flex-col">
           <!-- TITLE TASK -->
-          <p class="truncate p-0.5">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <p class="bg-innerLayer truncate p-1 rounded-t-md">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
           <!-- TASK BUTTON -->
-          <ul class="w-full flex flex-row">
+          <ul class="bg-blue w-full pt-1.5 pb-1.5 flex flex-row justify-evenly rounded-b-md">
             <li>
-              <button class="text-[10px] flex flex-col items-center">
-                <i class="fa-solid fa-eye text-2xl"></i>
+              <button class="text-[9px] flex flex-col items-center text-innerLayer w-12">
+                <i class="fa-solid fa-eye text-2xl !w-full h-full inline-flex items-center justify-center rounded-2xl p-0.5"></i>
                 View
               </button>
             </li>
             <li>
-              <button class="text-[10px] flex flex-col items-center">
-                <i class="fa-solid fa-pen-to-square text-2xl"></i>
+              <button class="text-[9px] flex flex-col items-center text-innerLayer w-12">
+                <i class="fa-solid fa-pen-to-square text-2xl !w-full h-full rounded-2xl p-0.5"></i>
                 Edit
               </button>
             </li>
             <li>
-              <button class="text-[10px] flex flex-col items-center">
-                <i class="fa-solid fa-trash text-2xl"></i>
+              <button class="text-[9px] flex flex-col items-center text-innerLayer w-12">
+                <i class="fa-solid fa-trash text-2xl !w-full h-full rounded-2xl p-0.5"></i>
                 Remove
               </button>
             </li>
-            <li><button>Complete</button></li>
+            <li>
+              <button class="text-[9px] flex flex-col items-center text-white w-12">
+                <i class="fa-solid fa-check text-2xl !w-full h-full rounded-2xl p-0.5"></i>
+                Complete
+              </button>
+            </li>
           </ul>
         </div>
       </div>
+      <button class="bg-blue text-innerLayer text-2xl font-bold mt-auto max-w-full w-full p-2 rounded-md">Add Task</button>
     </section>
     <!-- COMPLETE TASK VIEW SECTION -->
     <section></section>
