@@ -1,6 +1,6 @@
 const btnBurger = document.querySelector("#btnBurger");
 const btnClose = document.querySelector("#btnClose");
-const button = document.querySelectorAll("#btn-home, #btn-about, #btn-about");
+const button = document.querySelectorAll("#btn-home, #btn-completeTask, #btn-about");
 
 const navMenu = document.querySelector("#navMenu");
 const footerInfo = document.querySelector("#footerInfo");
