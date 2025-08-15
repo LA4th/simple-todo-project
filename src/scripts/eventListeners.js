@@ -1,8 +1,6 @@
 const btnBurger = document.querySelector("#btnBurger");
 const btnClose = document.querySelector("#btnClose");
-const btnHome = document.querySelector("#btnHome");
-const btnCompleteTask = document.querySelector("#btnCompleteTask");
-const btnAbout = document.querySelector("#btnAbout");
+const button = document.querySelectorAll("#btn-home, #btn-about, #btn-about");
 
 const navMenu = document.querySelector("#navMenu");
 const footerInfo = document.querySelector("#footerInfo");
@@ -18,6 +16,18 @@ const viewNavBarToggle = () => {
   });
 };
 
+const activeHoverNavMenu = () => {
+  button.forEach(buttons => {
+    buttons.addEventListener("click", () => {
+      const targetId = buttons.id.replace("btn-", "section-");
+      const targetSection = document.getElementById(targetId);
+
+      targetSection.scrollIntoView({behavior: "smooth"});
+    });
+  });
+};
+
 export const eventListeners = () => {
   viewNavBarToggle();
+  activeHoverNavMenu();
 };

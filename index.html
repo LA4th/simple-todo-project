@@ -27,19 +27,19 @@
         </li>
         <!-- HOME BTN -->
         <li class="text-center">
-          <button id="btnHome" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="Home_Button">
+          <button id="btn-home" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md md:bg-transparent bg-hoverBlue md:cursor-pointer md:border-b-[2px] md:border-transparent md:hover:border-b-hoverBlue" aria-label="Home_Button">
             Home
           </button>
         </li>
         <!-- COMPLETE TASK BTN -->
         <li class="text-center">
-          <button id="btnCompleteTask" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="Complete_Task_Button">
+          <button id="btn-completeTask" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md md:bg-transparent bg-hoverBlue md:cursor-pointer md:border-b-[2px] md:border-transparent md:hover:border-b-hoverBlue" aria-label="Complete_Task_Button">
             Complete Task
           </button>
         </li>
         <!-- ABOUT BTN -->
         <li class="text-center">
-          <button id="btnAbout" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md bg-red md:bg-transparent md:border-b-[2px] md:border-transparent md:hover:border-red md:cursor-pointer md:transition md:ease-in-out md:duration-150" aria-label="About_Button">
+          <button id="btn-about" class="text-white text-[18px] font-bold w-full p-1.5 rounded-md md:bg-transparent bg-hoverBlue md:cursor-pointer md:border-b-[2px] md:border-transparent md:hover:border-b-hoverBlue" aria-label="About_Button">
             About
           </button>
         </li>
@@ -49,13 +49,13 @@
   <!-- MAIN SECTION -->
   <main class="max-w-full w-[900px] pl-2 pr-2 m-auto flex flex-1 flex-col mt-2 mb-2">
     <!-- HOME VIEW SECTION -->
-    <section class="h-screen max-w-full flex flex-col items-center gap-y-3">
+    <section id="section-home" class="h-screen max-w-full flex flex-col items-center gap-y-3 scroll-mt-[80px]">
       <!-- SEARCH BAR CONTAINER -->
       <div class="bg-white w-full p-3 rounded-md flex flex-row justify-center shadow-md">
         <input class="w-full p-1 bg-innerLayer" type="text" name="" id="" placeholder="Search...">
-        <button class="bg-blue md:hover:shadow-md md:hover:scale-105 md:transition-all md:duration-300 md:ease-in-out text-innerLayer p-1 font-bold w-25 rounded-r-md cursor-pointer">Search</button>
+        <button class="bg-blue md:hover:bg-hoverBlue md:hover:shadow-md md:hover:scale-105 md:transition-all md:duration-300 md:ease-in-out text-innerLayer p-1 font-bold w-25 rounded-r-md md:cursor-pointer">Search</button>
       </div>
-      <button class="bg-blue md:hover:shadow-md text-innerLayer text-2xl font-bold mt-2 max-w-full w-full p-2 rounded-md cursor-pointer">Add Task</button>
+      <button class="bg-blue md:hover:bg-hoverBlue md:hover:shadow-md text-innerLayer text-2xl font-bold mt-2 max-w-full w-full p-2 rounded-md md:cursor-pointer">Add Task</button>
       <!-- TASK CONTAINER -->
       <div class="w-full h-full pl-2 pr-2 pt-5 pb-5 rounded-md bg-white shadow-md overflow-y-scroll flex flex-col gap-y-3">
         <!-- TASK CARD -->
@@ -66,7 +66,7 @@
           <ul class="bg-blue w-full pt-1.5 pb-1.5 flex flex-row justify-evenly rounded-b-md">
             <li>
               <button class="text-[9px] flex flex-col items-center text-innerLayer w-12 md:cursor-pointer">
-                <i class="fa-solid fa-eye text-2xl !w-full h-full inline-flex items-center justify-center rounded-2xl p-0.5 hover:bg-white hover:text-grey"></i>
+                <i class="fa-solid fa-eye text-2xl !w-full h-full inline-flex items-center justify-center rounded-2xl p-0.5 md:hover:bg-white md:hover:text-grey"></i>
                 View
               </button>
             </li>
@@ -93,7 +93,7 @@
       </div>
     </section>
     <!-- COMPLETE TASK VIEW SECTION -->
-    <section class="mt-14 h-screen flex flex-col">
+    <section id="section-completeTask" class="mt-14 h-screen flex flex-col scroll-mt-[80px]">
       <span class="bg-green text-2xl font-bold text-innerLayer rounded-t-md p-2.5">COMPLETED TASK</span>
       <!-- TASK CONTAINER -->
       <div class="bg-white w-full h-full pt-5 pl-3 pr-3 pb-5 overflow-y-scroll flex flex-col gap-y-3 rounded-b-md shadow-md">
@@ -105,7 +105,7 @@
           <ul class="bg-blue w-1/2 pt-1.5 pb-1.5 flex flex-row justify-evenly rounded-r-md">
             <li>
               <button class="text-[9px] flex flex-col items-center text-innerLayer w-12 md:cursor-pointer">
-                <i class="fa-solid fa-eye text-2xl !w-full h-full inline-flex items-center justify-center rounded-2xl p-0.5 hover:bg-white hover:text-grey"></i>
+                <i class="fa-solid fa-eye text-2xl !w-full h-full inline-flex items-center justify-center rounded-2xl p-0.5 md:hover:bg-white md:hover:text-grey"></i>
                 View
               </button>
             </li>
@@ -118,10 +118,10 @@
           </ul>
         </div>
       </div>
-      <button class="bg-red text-innerLayer text-2xl font-bold mt-5 max-w-full w-full p-2 rounded-md md:w-1/3 md:ml-auto md:cursor-pointer md:hover:shadow-md">Clear Task</button>
+      <button class="bg-red text-innerLayer text-2xl font-bold mt-5 max-w-full w-full p-2 rounded-md md:hover:bg-hoverRed md:w-1/3 md:ml-auto md:cursor-pointer md:hover:shadow-md">Clear Task</button>
     </section>
     <!-- ABOUT VIEW SECTION -->
-    <section></section>
+    <section id="section-about"></section>
   </main>
   <!-- FOOTER SECTION -->
   <footer id="footerInfo" class="bg-black max-w-full w-1/2 pt-5 pb-5 flex flex-col items-center gap-y-1 fixed bottom-0 right-0 z-50 transition ease-in-out duration-300 transform translate-x-full opacity-0 pointer-events-none md:static md:translate-x-0 md:opacity-100 md:pointer-events-auto md:w-full md:h-full">
