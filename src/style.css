@@ -11,6 +11,7 @@
   --color-red: #961B27;
   --color-hoverRed: #AD2330;
   --color-green: #228C22;
+  --color-hoverGreen: #2EB82E;
   --color-blue: #03204C;
   --color-hoverBlue: #042A5A;
   --color-grey: #555555;
@@ -20,6 +21,6 @@
 }
 
 /* DEBUG LAYOUT */
-* {
+/* * {
   border: 1px solid red;
-}
+} */

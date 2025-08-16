@@ -134,23 +134,36 @@
     </section>
   </main>
   <!-- MODAL CONTAINER -->
-  <div class="h-[40vh] max-w-full w-[350px] m-auto rounded-md bg-white shadow-md">
-    <span>Add Task</span>
-    <form>
-      <label for="">Task title</label>
-      <input type="text">
-
-      <label for=""></label>
-      <select name="" id="">
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-      </select>
-
-      <label for=""></label>
-      <textarea name="" id=""></textarea>
+  <div id="modal-container" class="h-[50vh] max-w-full w-[350px] m-auto rounded-md bg-white shadow-md overflow-hidden flex flex-col fixed top-25 left-6 md:left-80 md:w-1/2 md:h-[70vh]">
+    <!-- HEADER ADD TASK CONTAINER -->
+    <div class="bg-blue p-2 flex flex-col">
+      <button id="modal-close" aria-label="Modal btn close" class="ml-auto border-[1px] border-innerLayer rounded-md md:cursor-pointer"><i class="fa-solid fa-xmark text-innerLayer text-[20px]"></i></button>
+      <span class="text-innerLayer font-bold">ADD TASK</span>
+    </div>
+    
+    <form class="flex flex-col h-full w-full p-2.5 gap-y-5">
+      <span class="flex flex-col w-full">
+        <label for="" class="text-[15px]">Task title</label>
+        <input type="text" class="bg-innerLayer rounded-md p-1.5" placeholder="Ex. Coding 1hour">
+      </span>
+      <span class="flex flex-col w-full">
+        <label for="" class="text-[15px]">Priority</label>
+        <select name="" id="" class="bg-innerLayer rounded-md p-1.5">
+          <option value="">Default</option>
+          <option value="">High Priority</option>
+          <option value="">Mid Priority</option>
+          <option value="">Low Priority</option>
+        </select>
+      </span>
+      <span class="flex flex-col w-full">
+        <label for="" class="text-[15px]">Comments</label>
+        <textarea name="" id="" class="w-full h-[80px] bg-innerLayer p-1.5 rounded-md" placeholder="Ex. DSA JavaScript"></textarea>
+      </span>
     </form>
+    <div class="flex flex-row justify-evenly gap-x-10 p-2.5">
+      <button class="w-full p-1.5 rounded-md font-bold text-innerLayer bg-red md:hover:bg-hoverRed md:cursor-pointer md:hover:shadow-md">Clear</button>
+      <button class="w-full p-1.5 rounded-md font-bold text-innerLayer bg-green md:hover:bg-hoverGreen md:cursor-pointer md:shadow-md">Add</button>
+    </div>
   </div>
   <!-- FOOTER SECTION -->
   <footer id="footerInfo" class="bg-black max-w-full w-1/2 pt-5 pb-5 flex flex-col items-center gap-y-1 fixed bottom-0 right-0 z-50 transition ease-in-out duration-300 transform translate-x-full opacity-0 pointer-events-none md:static md:translate-x-0 md:opacity-100 md:pointer-events-auto md:w-full md:h-full">
