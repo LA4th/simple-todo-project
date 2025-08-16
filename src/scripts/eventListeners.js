@@ -9,10 +9,12 @@ const viewNavBarToggle = () => {
   btnBurger.addEventListener("click", () => {
     navMenu.classList.remove("translate-x-full", "opacity-0", "pointer-events-none");
     footerInfo.classList.remove("translate-x-full", "opacity-0", "pointer-events-none");
+    document.body.classList.add("overflow-hidden");
   });
   btnClose.addEventListener("click", () => {
     navMenu.classList.add("translate-x-full", "opacity-0", "pointer-events-none")
     footerInfo.classList.add("translate-x-full", "opacity-0", "pointer-events-none")
+    document.body.classList.remove("overflow-hidden");
   });
 };
 

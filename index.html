@@ -121,18 +121,37 @@
       <button class="bg-red text-innerLayer text-2xl font-bold mt-5 max-w-full w-full p-2 rounded-md md:hover:bg-hoverRed md:w-1/3 md:ml-auto md:cursor-pointer md:hover:shadow-md">Clear Task</button>
     </section>
     <!-- ABOUT VIEW SECTION -->
-    <section id="section-about" class="mt-14 w-full h-auto bg-white flex flex-col rounded-md overflow-hidden scroll-mt-[80px]">
-      <span class="bg-black text-innerLayer text-2xl p-2.5 w-full font-bold">ABOUT</span>
-      <div class="flex flex-col items-center md:flex md:flex-row md:justify-evenly">
+    <section id="section-about" class="mt-14 w-full h-auto bg-white flex flex-col rounded-md overflow-hidden shadow-md">
+      <span class="bg-hoverBlue text-innerLayer text-2xl p-2.5 w-full font-bold">ABOUT</span>
+      <div class="pt-8 pb-8 pl-5 pr-5 flex flex-col items-center gap-y-5 md:flex md:flex-row md:justify-evenly">
         <!-- IMG BACKGROUND SET -->
-        <span class="h-[200px] w-[200px] max-w-full rounded-[200px] m-1.5 bg-[url('')]"></span>
+        <img src="/assets/my_profile.jpg" alt="Profile Pic" class="h-[200px] w-[200px] max-w-full rounded-[200px] shadow-md">
         <!-- PARAGRAPH EXPLAINE FOR ABOUT PROJECT -->
-        <p class="w-full h-full p-2.5 md:w-1/2">
+        <p class="bg-hoverBlue text-innerLayer w-full h-full rounded-md shadow-md text-justify p-2.5 md:w-1/2">
           This simple to-do application is designed to help users keep track of their daily tasks in one convenient place. It allows you to add, edit, and delete tasks quickly, ensuring your to-do list stays up-to-date. The clean and minimal interface makes it easy to focus on what matters most getting things done.
         </p>
       </div>
     </section>
   </main>
+  <!-- MODAL CONTAINER -->
+  <div class="h-[40vh] max-w-full w-[350px] m-auto rounded-md bg-white shadow-md">
+    <span>Add Task</span>
+    <form>
+      <label for="">Task title</label>
+      <input type="text">
+
+      <label for=""></label>
+      <select name="" id="">
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+
+      <label for=""></label>
+      <textarea name="" id=""></textarea>
+    </form>
+  </div>
   <!-- FOOTER SECTION -->
   <footer id="footerInfo" class="bg-black max-w-full w-1/2 pt-5 pb-5 flex flex-col items-center gap-y-1 fixed bottom-0 right-0 z-50 transition ease-in-out duration-300 transform translate-x-full opacity-0 pointer-events-none md:static md:translate-x-0 md:opacity-100 md:pointer-events-auto md:w-full md:h-full">
     <span class="text-white text-[10.5px] md:text-[18px]">&copy; 2025 To-Do Muto. All rights reserved.</span>
