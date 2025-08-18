@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
   <title>To-Do Muto</title>
 </head>
-<body class="font-roboto overflow-x-hidden md:min-h-screen flex flex-col">
+<body class="font-roboto overflow-x-hidden md:min-h-screen flex flex-col justify-center">
   <header class="bg-black h-[70px] sticky top-0 z-50">
     <!-- NAV CONTAINER [900px] -->
     <nav class="max-w-full w-[900px] p-3 h-full m-auto flex justify-between items-center gap-x-2.5">
@@ -55,7 +55,7 @@
         <input class="w-full p-1 bg-innerLayer" type="text" name="" id="" placeholder="Search...">
         <button class="bg-blue md:hover:bg-hoverBlue md:hover:shadow-md md:hover:scale-105 md:transition-all md:duration-300 md:ease-in-out text-innerLayer p-1 font-bold w-25 rounded-r-md md:cursor-pointer">Search</button>
       </div>
-      <button class="bg-blue md:hover:bg-hoverBlue md:hover:shadow-md text-innerLayer text-2xl font-bold mt-2 max-w-full w-full p-2 rounded-md md:cursor-pointer">Add Task</button>
+      <button id="btn-add-task" class="bg-blue md:hover:bg-hoverBlue md:hover:shadow-md text-innerLayer text-2xl font-bold mt-2 max-w-full w-full p-2 rounded-md md:cursor-pointer">Add Task</button>
       <!-- TASK CONTAINER -->
       <div class="w-full h-full pl-2 pr-2 pt-5 pb-5 rounded-md bg-white shadow-md overflow-y-scroll flex flex-col gap-y-3">
         <!-- TASK CARD -->
@@ -134,7 +134,41 @@
     </section>
   </main>
   <!-- MODAL CONTAINER -->
-  
+  <div id="modal-container" class="hidden pt-15 w-screen h-screen fixed top-15 z-40 backdrop-blur-md">
+    <!-- MODAL -->
+    <div class="bg-white w-[350px] m-auto flex flex-col justify-center rounded-md overflow-hidden shadow-xl">
+      <!-- MODAL HEADER -->
+      <div class="bg-black flex flex-row justify-between p-3">
+        <span class="text-innerLayer font-bold text-2xl">ADD TASK</span>
+        <button id="btn-modal-close" class="border-[1px] border-innerLayer rounded-md md:cursor-pointer"><i class="fa-solid fa-xmark text-innerLayer text-[24px]"></i></button>
+      </div>
+      <form class="flex flex-col justify-center gap-y-5 p-2.5">
+        <!-- TITLE INPUT -->
+        <div class="flex flex-col">
+          <label for="" class="">Title</label>
+          <input type="text" name="" id="" class="bg-innerLayer w-full p-2.5 rounded-md" placeholder="Ex. Coding 1hour">
+        </div>
+        <!-- SELECT INPUT -->
+        <div class="flex flex-col">
+          <label for="">Priority</label>
+          <select name="" id="" class="bg-innerLayer p-2.5 rounded-md">
+            <option value="">Select</option>
+            <option value="">High Priority</option>
+            <option value="">Mid Priority</option>
+            <option value="">Low Priority</option>
+          </select>
+        </div>
+        <div class="flex flex-col">
+          <label for="">Comments</label>
+          <textarea name="" id="" class="bg-innerLayer w-full h-[100px] p-2.5 rounded-md" placeholder="Ex. Python DSA"></textarea>
+        </div>
+      </form>
+      <div class="flex flex-row justify-evenly gap-x-16 p-2.5">
+        <button class="w-1/2 p-1.5 font-bold text-innerLayer rounded-md bg-red">Clear</button>
+        <button class="w-1/2 p-1.5 font-bold text-innerLayer rounded-md bg-blue">Add Task</button>
+      </div>
+    </div>
+  </div>
   <!-- FOOTER SECTION -->
   <footer id="footerInfo" class="bg-black max-w-full w-1/2 pt-5 pb-5 flex flex-col items-center gap-y-1 fixed bottom-0 right-0 z-50 transition ease-in-out duration-300 transform translate-x-full opacity-0 pointer-events-none md:static md:translate-x-0 md:opacity-100 md:pointer-events-auto md:w-full md:h-full">
     <span class="text-white text-[10.5px] md:text-[18px]">&copy; 2025 To-Do Muto. All rights reserved.</span>
